@@ -1,0 +1,600 @@
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Cheeky Bite Shine";
+  src: local("./fonts/Cheeky.ttf");
+ }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+/* .ui-autocomplete { height: 250px; overflow-y: scroll; overflow-x: hidden;z-index:5;} */
+
+.App-header {
+  /* font-family: 'Permanent Marker', cursive; */
+  text-shadow:0 4px 0 #00ecff, 0 -4px 0 #ff4045;
+  font-family: 'Bangers', cursive;
+  text-align: center;
+  height:100vh;
+  background-image:url('./medias/terrebattue.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y:center ;
+  min-height: 24vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0px 12px 0px rgba(0, 0, 0, 0.69);
+  font-size:6vmin;
+}
+
+.titre1{
+  text-shadow:0 4px 0 #00ecff, 0 -4px 0 #ff4045;
+  font-family: 'Bangers', cursive;
+  font-size: calc(15px + 10vmin);
+}
+
+.titre2{
+  text-shadow:0 4px 0 #00ecff, 0 -4px 0 #ff4045;
+  font-family: 'Bangers', cursive;
+  font-size: calc(10px + 6vmin);
+}
+/* 
+#menuToggle
+{
+  position: absolute;;
+  top:5em;
+  right:5em;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+} */
+
+/* #menuToggle a
+{
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  z-index:11110;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width:80px;
+  height: 32px;
+
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  -webkit-touch-callout: none;
+  
+}
+
+#menuToggle span
+{
+  font-size:45px;
+  cursor:pointer;
+  display: block;
+  width: 80px;
+  height: 14px;
+  margin-bottom: 10px;
+  position: relative;
+  background:white;
+  border-radius: 15px; 
+  z-index: 1111111111; 
+  transform-origin: 4px 0px; 
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+ul #menu{
+  position:absolute; 
+  right:500px;
+}
+
+#menu
+{
+  width: 310px;
+  height:40em;
+  margin: -120px -1000px -100px -150px;
+  padding-top: 125px;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(0%, 0%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding-top:40px;
+  font-size: 28px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  
+  transform: none;
+} */
+
+body{
+  background-image: url('./medias/fondopac.png');
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-position: center;
+  min-height:100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.logoRG{
+  position:absolute;
+  background-size:contain;
+  background-repeat: no-repeat;
+  width:20%;
+  top:5vh;
+  left:5vw;
+}
+
+.colsm{
+  width:20vw;
+}
+.gif{
+  position:absolute;
+  background-size:contain;
+  background-repeat: no-repeat;
+  width:20%;
+  top:5vh;
+  left:75vw;
+}
+
+.profilJoueur{
+  float:right; 
+  cursor:pointer;
+  font-size:x-large;
+  font-weight:bolder; 
+  background-color:#ccc;
+  width:25%;
+  border-radius:5%;
+  margin-right:10%;
+}
+.retourTableau{
+  float:left; 
+  cursor:pointer;
+  font-size:x-large;
+  font-weight:bolder; 
+  background-color:#ccc;
+  width:25%;
+  border-radius:5%;
+  margin-right:10%;
+  position:absolute;
+  margin-top:-5%;
+}
+.confront{
+  margin-right:0.5em;
+}
+
+.errorEditions{
+  position:absolute;
+  top:5em;
+  border: 5px solid red;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.tour{
+  width:15vw;
+  margin-bottom: 5vh;
+}
+.tableau{
+  background-color: rgba(255,255,255, 0.75);
+  background-repeat: no-repeat;
+  background-attachment:  fixed;
+  background-position: center;
+  background-size:cover;
+  justify-content:space-around;
+}
+.tr1 {
+  max-height:5vh;
+  max-width: 15vw;
+  overflow:hidden;
+}
+.tr2 {
+  max-height:5vh;
+  max-width: 15vw;
+  overflow:hidden;
+}
+.tr3 {
+  max-height:5vh;
+  max-width: 15vw;
+  overflow:hidden;
+}
+.td1{
+  margin-bottom:8%;
+}
+.nmtr1{
+  margin-top:18%;
+  margin-bottom: 18%;
+  background-color:rgb(8, 153, 8);
+  border-radius:20px;
+  
+}
+.nmtr2{
+  margin-top:18%;
+  margin-bottom: 32%;
+  background-color:rgb(8, 153, 8);
+  border-radius:20px;
+}
+.nmtr3{
+  margin-top:18%;
+  margin-bottom: 59%;
+  background-color:rgb(8, 153, 8);
+  border-radius:20px;
+}
+.nmtr4{
+  margin-top:18%;
+  margin-bottom: 115%;
+  background-color:rgb(8, 153, 8);
+  border-radius:20px;
+}
+.td2{
+  margin-bottom:35%;
+}
+.td3{
+  margin-bottom:89%;
+}
+.td4{
+  margin-bottom:195%;
+}
+.Participation {
+  margin-top:2em;
+  display:'none';
+  width:100%;
+}
+.fondTableau {
+     background-color: rgba(255,255,255, 0.75);
+
+  height:fit-content;
+}
+
+.tdScores{
+  border-right:dashed black 0.2px;
+  width:0.8vw;
+  font-size: 1.2vh;
+  overflow: hidden;
+  max-height:5vh;
+}
+.tdJoueurs{
+  width:8vw;
+  font-size:1.5vh;
+  overflow: hidden;
+  /* max-height:2vh; */
+
+  border-bottom:1px solid black; 
+  border-right:1px solid black;
+}
+
+.tour{
+  position:sticky;
+  width:10vw;
+  top:1vh;
+  margin-top:5vh;
+  color:white;
+  text-align: center;
+  font-size:1.6em;
+  background-color:#28A745;
+  border-radius:2em;
+}
+
+.Editions {
+  /* margin-left:-9.2em; */
+  display:none;
+  /* width:120%; */
+}
+.participations{
+  padding-top:50px;
+  width:80%;
+  margin:auto;
+}
+
+.errorParticipation{
+  text-align:center;
+  margin:auto;
+  width:80%; 
+  position:absolute; 
+}
+.participationJoueur{
+  background-color:#ff6b00;
+  margin:1em;
+  border-radius:8%;
+  width:15%;
+  cursor:pointer;
+}
+
+
+.MatchsGagnes{
+    width:90%;
+    margin-top:4%;
+    padding-right:2.2%;
+    padding-left:5.2%;
+    font-size:large;
+    font-weight:bold;  
+}
+
+.lesTours{
+  margin-left: 55%;
+  padding:none;
+}
+
+.lesTours:first-of-type{
+  margin-top: -3.5%;
+  background-color:rgba(0, 0, 255, 0.3);
+  text-align: center;
+}
+.lesTours:last-of-type{
+  margin-top: -3.5%;
+  background-color: rgba(255,0,0,0.3);
+  text-align: center;
+}
+
+
+.MatchsPerdus{
+  width:90%;
+  margin-top:1%;
+  padding:2.2%;
+  font-size:large;
+  font-weight:bold;  
+}
+
+
+
+/* .photo{
+  float:left;
+  height:50%;
+  width:30%;
+  padding:2%;
+}
+.photo img{
+  height:100%; 
+  width:100%;
+} */
+
+.fullName{
+  width:100%; 
+  margin-left:30%;
+  padding:3%;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.fullNamePrenom{
+  font-size:x-large;
+  font-weight:bold;
+  margin-left:3%;
+}
+
+.Nationalite{
+  position:absolute;
+  width:100%;
+  padding:3%;
+  font-size: large;
+  font-weight: 700;
+  margin-left:28%;
+  margin-top:-4%;
+}
+
+.carriere{
+  width:60%;
+  box-shadow:0px 2px 10px 3px black;
+  margin-left:30%;
+  margin-top:6%;
+  padding:2.2%;
+}
+
+html, body, #root{
+  margin:'none';
+  display:block; 
+}
+
+
+
+
+
+.BRC{
+  border-radius:0.5em;;
+}
+.RC{
+  display:block;
+  height:2.5em;
+  justify-content: center;
+} 
+.side{
+  margin-top:-7.5%;
+  margin-left:103.5%;
+  top:20%;
+}
+.tableFM{
+  width:150%;
+  margin-left:-0.5%;
+}
+.sortresultats{
+width:24%;
+}
+.sortannée{
+  width:12%;
+  }
+  .sorttour{
+    width:17%;
+    }
+    .sortadversaire{
+      width:20%;
+      }
+    .sortscore{
+      width:53%;
+      }
+.offside{
+  margin-top:-7.5%;
+  margin-left:-115%;
+  top:20%;
+  width:20%;
+  }
+
+
+.deleteHistory{
+  margin-top:-2.2%;
+  margin-left:2%;
+  height:12%;
+  width:4.3%;
+  content:url('./medias/iconMain/deleteHistory.png');
+  cursor:pointer;
+}
+.btnBeteNoire{
+  margin:8px;
+}
+.resetSite{
+  height:15%;;
+  width:5.3%;
+  margin-top:-2.2%;
+  content:url('./medias/iconMain/resetSite.png');
+  cursor:pointer;
+}
+.infoBulle{
+  visibility:hidden;
+}
+.deleteHistory:hover .infoBulle{
+  visibility:visible;
+  width:100%;
+  background-color:black; 
+  color:white;
+  display:inline-block;
+}
+.form-row{
+  margin-top:0.3em;
+  margin-bottom:0.6em;
+}
+
+.next{
+  height:5em;
+  width:5em;
+  content: url('./medias/iconMain/next.png');
+  position:sticky;
+  cursor:pointer;
+  top:10%;
+  margin-left:103.5%;
+}
+
+.previous{
+  height:5em;
+  width:5em;
+  content: url('./medias/iconMain/return.png');
+  position:sticky;
+  cursor:pointer;
+  top:10%;
+  margin-left:-113.5%;
+}
+
+.OK{
+  margin-left:2.1em;
+  border-radius:10%;
+}
+
+.Main{
+  align-items: center;
+  padding:2%;
+  border-radius:2%;
+  box-shadow:0px 2px 10px 3px black;
+  margin-top:5.5vh;
+  height:25vh;
+  width:42vw;
+  background-color:orangered;
+}
+.OKC{
+  border-radius:10%;
+  margin-left:1.2em;
+}
+.BRC{
+  margin-top:0.5em;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.myfooter{
+  background:rgba(0, 0, 0, 0.69);
+position:fixed;
+bottom:0;
+width:100%;
+height:2.5em;;
+}
+
+
+
+.prefooter{
+  background-color:black; 
+  top:100%;
+ position:relative; 
+ height:20rem;
+ bottom:0 !important;
+ left:0;
+ right:0;
+ margin-top:10rem;
+}
+
+.Modal {
+  display:none;
+  background-color:white; 
+  position:fixed;
+  /* position:sticky; */
+  z-index:2;
+  position:sticky;
+  border:1px solid #ccc;
+  box-shadow: 1px 1px 1px black ;
+  padding:16px;
+  width:70%;
+  margin-top:-30%;
+  height:contain;
+  box-sizing: border-box;
+  transition:all 0.3s ease-out;
+}
+.ModalJoueurs {
+  display:none;
+  background-color:#ccc; 
+  position:fixed;
+  top:56%;
+  margin-top:-16.2%; 
+  z-index:8000;
+  border:1px solid #ff6b00;
+  box-shadow: 2px 2px 1px black ;
+  padding:16px;
+  width:35%;
+  margin-left:32%;
+  padding:1%;
+}
