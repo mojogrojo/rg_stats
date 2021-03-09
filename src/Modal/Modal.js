@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useRef} from 'react';
 import '../App.css';
 import GetAllInfos from '../component/getter/getAllInfos.js';
 import getBeteNoire from '../component/getter/getBeteNoire.js'
@@ -25,7 +25,9 @@ function Modal(props){
     const [valTour, setvalTour] = useState('0')
     const [beteNoire, setbeteNoire] = useState('');
     const [chairCanon, setchairCanon] = useState('')
+    const refBeteNoire = useRef();
     const joueurs = props.joueurs; 
+    console.log(joueur)
     const editions = props.editions; 
     const scores = props.scores;  
 
@@ -40,6 +42,7 @@ function Modal(props){
       const onChange2 = (value) => {
         setJoueur('');
         setbeteNoire(value);
+        console.log(beteNoire);
         setvalTour('0');
         setAnnee('');
         setlaBeteNoire('');
@@ -67,6 +70,7 @@ function Modal(props){
           delay: 0,
           minLength: 0, 
           select: function(event, ui) {
+            console.log(ui.item.label)
             setJoueur(ui.item.label)}
           })
     }
@@ -135,13 +139,17 @@ function Modal(props){
 
         <div className='form-row'>   Chercher la bête noire d'un joueur... :
   <input type='text' id='autoComplete2' className='form-control col-12 autoComplete2' placeholder="Bête noire..." value={beteNoire} onChange={(event) => {onChange2(event.target.value);
-  fonctionJS2()}}/>
+  fonctionJS2()}} ref={refBeteNoire} />
 {/* <input type='text' id='chairCanon' className='form-control col-12' placeholder="chair à canon..." value={chairCanon} onChange={e => setchairCanon(e.target.value)}/>  */}
 </div>
 <div className='form-row'>
     <button className='btn-danger'
-    onClick={()=> setlaBeteNoire(getBeteNoire(beteNoire, joueurs, scores, editions)
-                  )
+    onClick={()=> 
+ {     
+   console.log(refBeteNoire.current.value);
+        console.log(refBeteNoire.current.value.split(' ')[0]);
+        console.log(refBeteNoire.current.value.split(' ')[1]);
+      setlaBeteNoire(getBeteNoire(refBeteNoire.current.value.split(' ')[0], refBeteNoire.current.value.split(' ')[1], joueurs, scores, editions))}
     }
   >Bête noire</button>
     {/* <button className='btn-primary'

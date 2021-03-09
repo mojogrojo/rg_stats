@@ -11,10 +11,12 @@ import getMatchEdition from './getMatchEdition';
 import Modal from '../../Modal/Modal.js';
 
 function GetAllInfos(props){
+  console.log(props.joueur)
   let fullName = props.joueur.split(' ');
   let nomJoueur = fullName[0]
-  console.log(fullName[1]);
-    var idJoueur = getIdJoueur(props.joueurs, nomJoueur);
+  let prenomJoueur = fullName[1]
+  // console.log(fullName[1]);
+    var idJoueur = getIdJoueur(props.joueurs, nomJoueur, prenomJoueur);
     if (props.annee === ''){
         idEdition = null;
     }

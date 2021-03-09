@@ -7,11 +7,10 @@ import getLesNoms from './getLesNoms';
 import getLesMatchs from './getLesMatchs.js';
 import Modal from '../../Modal/Modal.js';
 
-function getBeteNoire(beteNoire, joueurs, scores, editions, fetch = 0){
-    
+function getBeteNoire(nomBeteNoire, prenomBeteNoire, joueurs, scores, editions, fetch = 0){
     var k = 0;
    var defaite = [];
-   var idJoueur = getIdJoueur(joueurs, beteNoire);
+   var idJoueur = getIdJoueur(joueurs, nomBeteNoire, prenomBeteNoire);
    
    if (idJoueur === undefined){
        return <div className='alert alert-danger'>Aucun résultat trouvé, assurez-vous d'avoir bien rentré un joueur existant.</div>
